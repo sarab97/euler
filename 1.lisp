@@ -3,9 +3,12 @@
 
 
 (let ((sum 0))
-  (loop for a from 1 to 1000
+  (loop for a from 1 to 999
 		if (or (= (mod a 3) 0) (= (mod a 5) 0))
-		  do (setq sum (+ sum a))
+		  do (incf sum a)
 		)
   (print sum)
   )
+
+
+;; Output 233168
